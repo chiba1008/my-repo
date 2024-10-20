@@ -2,7 +2,7 @@ name: Manual
 on:
   workflow_dispatch:
     inputs:
-      greetubg:
+      greeting:
         type: string
         default: "Hello"
         required: true
@@ -11,4 +11,4 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ github.event.inputs.greeting }}, World!"
+      - run: echo "${{ inputs.greeting }}, World!"
